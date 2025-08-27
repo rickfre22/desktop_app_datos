@@ -5,8 +5,8 @@ ventana.title("datos")
 ventana.geometry("400x400")
 ventana.config(bg="white")
 # funciones
-def abrir_ventana_1():
-    global ventana_1, gota
+def ventana_1():
+    global ventana_1
     ventana_1 =Toplevel()
     ventana_1.title("Fecha")
     ventana_1.geometry("200x100")
@@ -16,7 +16,7 @@ def abrir_ventana_1():
     "TS:A+\n" \
     "seguro:Nueva eps",bg="white").pack(pady=0)
 
-bt_fecha = Button(ventana, text="datos medicos",command=abrir_ventana_1)
+bt_fecha = Button(ventana, text="datos medicos",command=ventana_1)
 bt_fecha.place(x=10, y=140, width=100, height=30)
 
 
@@ -152,7 +152,4 @@ perfil = PhotoImage(file="img/perfil.png")
 lb_perfil=Label(frame_1,image=perfil,bg="pink")
 lb_perfil.place(x=0,y=0)
 
-gota = PhotoImage(file="img/gota.png")
-lb_gota=Label(ventana_1,image=perfil,bg="white")
-lb_gota.place(x=0,y=0)
 ventana.mainloop()
